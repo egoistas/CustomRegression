@@ -79,12 +79,10 @@ from linear_regression_scratch import LinearRegressionScratch
 from custom_scaler import CustomScaler
 from config import config
 
-# Load and preprocess data
 scaler = CustomScaler()
 data = [[...], [...]]  # Example features
 scaled_data = scaler.fit_transform(data)
 
-# Train the model
 model = LinearRegressionScratch(
     lr=config['learning_rate'],
     epochs=config['epochs'],
@@ -93,10 +91,8 @@ model = LinearRegressionScratch(
 )
 model.fit(X_train, y_train)
 
-# Evaluate the model
 print("MSE:", model.mean_squared_error(y_test, model.predict(X_test)))
 print("R² Score:", model.r2_score(y_test, model.predict(X_test)))
 
-# Make predictions
-predictions = model.predict([[...], [...]])  # Example new data
+predictions = model.predict([[...], [...]]) 
 ```
